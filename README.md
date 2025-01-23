@@ -1,4 +1,4 @@
-# PHP Project - Instructions for Setup and Usage
+# Imovel Guide Project - Instructions for Setup and Usage
 
 This document provides instructions for setting up and running your PHP project locally using XAMPP or any other web server with PHP and MySQL support.
 
