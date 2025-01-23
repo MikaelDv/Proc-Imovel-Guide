@@ -57,3 +57,42 @@
     height: 29px;
     cursor: pointer;
 }
+
+.message {
+    text-align: center;
+}
+
+.table-title {
+    margin: 12px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+table, th, td {
+    margin: 0 auto;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #363c55;
+    color: #fff;
+    font-weight: 600;
+    padding: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+th, td {
+    padding: 8px;
+}
+
+.th-name {
+    width: 200px;
+}
+
+tr:nth-child(even) {
+    background-color: #6f738a93;
+}
