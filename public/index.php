@@ -16,11 +16,13 @@ if ($conn->connect_error) {
 
 $cpf = $creci = $nome = $id = ''; 
 $message = '';
+$titleChange = 'Cadastro de Corretor';
 $labelButton = 'Enviar';
 
 session_start();
 
 if (isset($_GET['editar'])) {
+    $titleChange = 'Editar Cadastro';
     $labelButton = 'Salvar';
     $id = $_GET['editar'];
     $edit_sql = "SELECT id, cpf, creci, nome FROM corretores WHERE id = ?";
@@ -96,14 +98,14 @@ $result = $conn->query("SELECT id, cpf, creci, nome FROM corretores");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="./css/index.css">
     <title>Cadastro de Corretor</title>
-    <script src="../js/filtro.js" defer></script>
+    <script src="./js/filtro.js" defer></script>
 </head>
 <body>
     <main>
         <div class="wrapper">
-            <h1>Cadastro de Corretor</h1>
+            <h1><?php echo $titleChange; ?></h1>
             <form action="" method="POST" class="form">
                 <input type="text" class="form-input input-menor" name="cpf" id="cpf" placeholder="Digite seu CPF" minlength="11" maxlength="11" value="<?php echo htmlspecialchars($cpf); ?>" required>
                 <input type="text" class="form-input input-medio" name="creci" placeholder="Digite seu Creci" minlength="2" maxlength="20" value="<?php echo htmlspecialchars($creci); ?>" required>
